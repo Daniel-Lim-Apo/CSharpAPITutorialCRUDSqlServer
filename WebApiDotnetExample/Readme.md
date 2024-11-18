@@ -1,4 +1,4 @@
-﻿To create de Sql Server docker container, install anr run docker and use:  
+﻿To create de Sql Server docker container, install and run docker and use:  
 docker-compose up -d
 
 docker exec -it sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P YourSuperStrong@Passw0rd
