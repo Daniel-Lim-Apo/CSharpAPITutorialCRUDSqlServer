@@ -1,11 +1,11 @@
-﻿version: '3.8'
+﻿version: "3.8"
 
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: sqlserver
     environment:
-      - ACCEPT_EULA=Y
+      - ACCEPT_EULA="Y"
       - SA_PASSWORD=YourSuperStrong@Passw0rd
     ports:
       - "1433:1433"
@@ -15,3 +15,6 @@ services:
 networks:
   sqlserver-network:
     driver: bridge
+
+volumes:
+  sqlserver-data:
