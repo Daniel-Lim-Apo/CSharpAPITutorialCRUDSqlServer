@@ -1,0 +1,39 @@
+@baseUrl = https://localhost:7034
+@pessoaId = 2
+
+### Get all Pessoas
+GET {{baseUrl}}/api/Pessoa
+Accept: application/json
+
+### Get Pessoa by ID
+GET {{baseUrl}}/api/Pessoa/{{pessoaId}}
+Accept: application/json
+
+### Create new Pessoa
+POST {{baseUrl}}/api/Pessoa
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nome": "John Doe",
+  "cpf": "12345678900",
+  "email": "example1@example.com",
+  "dataDeNascimento": "1990-01-01T00:00:00"
+}
+
+### Update existing Pessoa
+PUT {{baseUrl}}/api/Pessoa/{{pessoaId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": {{pessoaId}},
+  "nome": "John Doe Updated",
+  "cpf": "12345678900",
+  "email": "updated@example.com",
+  "dataDeNascimento": "1990-01-01T00:00:00"
+}
+
+### Delete Pessoa by ID
+DELETE {{baseUrl}}/api/Pessoa/{{pessoaId}}
+Accept: application/json

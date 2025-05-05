@@ -13,7 +13,7 @@ CREATE TABLE Pessoas (
 );
 GO
 
-INSERT INTO Pessoa (CPF, DataDeNascimento, Email, Nome)
+INSERT INTO Pessoas (CPF, DataDeNascimento, Email, Nome)
 VALUES 
 ('12345678900', '1990-01-01', 'example1@example.com', 'John Doe'),
 ('98765432100', '1985-05-15', 'example2@example.com', 'Jane Doe');
