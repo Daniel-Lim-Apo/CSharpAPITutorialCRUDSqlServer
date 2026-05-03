@@ -28,6 +28,7 @@ The project is structured into the following layers to maintain clear responsibi
 
 ### 1. Start the SQL Server Database
 You can spin up a local SQL Server instance using Docker Compose. Open your terminal in the `WebApiDotnetExample` directory and run:
+(Be sure that you have Docker installed and running first)
 
 ```powershell
 docker-compose up -d
@@ -42,7 +43,7 @@ This flow uses the provided `init-sql/init.sql` script to create the database, t
 
 1. You can run this command in PowerShell to pipe the file into the sqlcmd tool inside the docker container:
    ```powershell
-   Get-Content init-sql\init.sql | docker exec -i sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P YourSuperStrong@Passw0rd
+   Get-Content init-sql\init.sql | docker exec -i sqlserver /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P YourSuperStrong@Passw0rd -C
    ```
 2. *(Alternatively, you can open SQL Server Management Studio (SSMS) or Azure Data Studio, connect to `localhost,1433` with user `sa` and the password `YourSuperStrong@Passw0rd`, and execute the `init-sql/init.sql` script directly).*
 
