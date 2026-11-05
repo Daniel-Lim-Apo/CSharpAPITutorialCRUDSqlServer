@@ -50,6 +50,16 @@ This flow uses the provided `init-sql/init.sql` script to create the database, t
 #### Flow 2: Using Entity Framework Core Migrations
 If you prefer an approach that relies completely on C# and Entity Framework tools:
 
+If you are using .NET 10, make sure your Entity Framework Core packages are compatible with EF Core 10.
+
+For example:
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 10.0.0
+
+Check:
+dotnet list package
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
 1. Open a terminal in the `WebApiDotnetExample` project folder.
 2. Install the EF tools if you don't have them yet:
    ```powershell
